@@ -1,0 +1,70 @@
+body {
+  margin: 0px;
+}
+main {
+  margin: auto;
+}
+header {
+  margin-top: 0px;
+  background-color: #404041;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #ED458B
+}
+h1 {
+  margin-top: 0px;
+}
+.top-section {
+  padding: 20%;
+  padding-top: 3%;
+}
+.top-section {
+  padding-left: 40%;
+  display: inline-block;
+  margin: auto;
+}
+}
+.bottom-section {
+  padding-left: 50%;
+  display: inline-block;
+  margin: 0 auto;
+}
+#guesser {
+  color: #E6E7E8;
+  font-weight: 300;
+  /*why is font-weight not working?*/
+}
+#user-guess {
+  width: 300px;
+  height: 40px;
+  font-size: 20pt;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  border: 2px solid #D3D4D5;
+  margin-left: 40%;
+}
+
+button {
+  background-color: #929497;
+  border-radius: 50pt;
+  width: 150px;
+  height: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  color: #FFFFFF;
+}
+
+.dis-button {
+  background-color: #D0D2D3;
+}
+
+#guess-button:hover {
+  background-color: #EB008B;
+}
+#clear-button:hover {
+  background-color: #EB008B;
+}
+#reset-button:hover {
+  background-color: #EB008B;
+}
