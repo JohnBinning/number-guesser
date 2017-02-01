@@ -1,24 +1,27 @@
-var initialNumb = getRandomNumb(min, max);
+// var initialNumb = getRandomNumb(min, max);
+var initialNumb = Math.floor(Math.random() * 100 +1);
+console.log(initialNumb);
 var userInputGuess = document.querySelector('#user-guess');
 var selGuessButton = document.querySelector('.guess-buttons');
 var selClearButton = document.querySelector('.clear-buttons');
 var selResetButton = document.querySelector('#reset-button');
 var inputText = document.querySelector('#result-text');
 var initialNumbValue = initialNumb.value;
+var lastGuess = document.querySelector('#last-guess');
 var min = 0;
 var max = 100;
 
 
-function getRandomNumb (min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  console.log('initialNumb')
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+// function getRandomNumb (min, max) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// };
 
 selGuessButton.addEventListener('click', function() {
   var findOut = userInputGuess.value;
-  return(findOut);
+  // return(findOut);
+  getAnswer();
 })
 
 selClearButton.addEventListener('click', function(){
@@ -32,14 +35,17 @@ selResetButton.addEventListener('click', function(){
 
 function getAnswer(){
   var number = parseInt(userInputGuess.value);
-  inputText.innerText = number;
-  if number > initialNumb {
+  console.log(number);
+  lastGuess.innerText = number;
+  if (number > initialNumb && number < max) {
     inputText.innerText = "That is too high!"
-  } else if number < initialNumb {
+  } else if (number < initialNumb && number > min) {
     inputText.innerText = "That is too low!"
-  } else if number == initialNumb {
+  } else if (number === initialNumb) {
     inputText.innerText = "BOOM!"
-  } else {
-    inputText.innerText = "Something went wrong!"
+  } else if (number > max || number < min) {
+    inputText.innerText = "Please pick a number within " + min + "and " + max
   }
-  }
+}
+// within html start buttons on disabled, then enable them based on an action
+// instead of click, use keyup
