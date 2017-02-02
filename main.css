@@ -5,6 +5,8 @@ body {
 header {
   margin-top: 0px;
   background-color: #404041;
+  padding-top: 3%;
+  padding-bottom: 3%;
   height: 20%;
   text-align: center;
   font-size: 32px;
@@ -21,7 +23,7 @@ h1 {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 5%;
-  font-size: 1.8em;
+  font-size: 1.4em;
   color: #404041
 
 }
@@ -36,7 +38,7 @@ h1 {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 5%;
-  font-size: 1.8em;
+  font-size: 1.4em;
   color: #404041
 }
 
@@ -48,16 +50,15 @@ h1 {
 }
 
 .top-section {
-  padding: 20%;
   padding-top: 3%;
   display: inline-block;
-  margin: auto;
+  width: 100%;
 }
 
-.bottom-section {
-  display: inline-block;
+/*.bottom-section {*/
+  /*display: inline-block;
   margin: 0 auto;
-}
+}*/
 #guesser {
   color: #E6E7E8;
   font-weight: 300;
@@ -88,6 +89,7 @@ main {
     border: 2px solid #D3D4D5;
     font-size: 1.5em;
     font-weight: 300;
+    margin-bottom: 2%;
 }
 
 button {
@@ -102,6 +104,12 @@ button {
   text-align: center;
   color: #FFFFFF;
 }
+
+.guess-buttons, .clear-buttons {
+  margin-left: 15%;
+  width: 70%;
+}
+
 /*#reset-button {*/
   /*width: 300px;
   text-align: center;
@@ -117,18 +125,25 @@ button {
 
 button:hover:enabled {
   background-color: #EB008B;
+  cursor: pointer;
 }
 
 #user-control-value {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 5%;
-  font-size: 1.8em;
+  font-size: 1.4em;
   color: #404041
 }
 
 #reset-button {
-  margin-left: : 25%;
+  margin-left: 15%;
+  width: 70%;
+}
+
+.user-range-button {
+  margin-left: 15%;
+  width: 70%
 }
 
 /*greater than 480px*/
@@ -141,5 +156,45 @@ button:hover:enabled {
   padding: 5px;
   margin-left: 20%;
 }
+}
 
+/*Greater than 900px*/
+@media screen and (min-width: 900px) {
+
+button {
+  background-color: #929497;
+  border-radius: 50pt;
+  border-width: 0;
+  margin-bottom: 1em;
+  width: 12em;
+  height: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color: #FFFFFF;
+  }
+
+  .guess-buttons, .clear-buttons {
+    width: 15em;
+  }
+
+  .guess-buttons {
+    margin-left: 15%
+  }
+
+  .clear-buttons {
+    margin-left: 5em;
+  }
+
+  #result-text {
+    font-size: 1.8em;
+  }
+
+  #user-control-value {
+    font-size: 1.8em;
+  }
+
+  #last-guess-was {
+    font-size: 1.8em;
+  }
 }
