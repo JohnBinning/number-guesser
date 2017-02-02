@@ -166,6 +166,10 @@ button:hover:enabled {
   /*bottom: 150px;*/
 }
 
+.min-input, .max-input {
+  width: 30%;
+}
+
 }
 
 /*Greater than 900px*/
