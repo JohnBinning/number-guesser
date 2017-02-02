@@ -46,7 +46,7 @@ selClearButton.addEventListener('click', function(){
 selResetButton.addEventListener('click', function(){
   getRandomNumb(minVal, maxVal);
   userInputGuess.value = "";
-  lastGuess.innerText ="";
+  lastGuess.innerText ="?";
   lastGuessWas.innerText ="";
   resultText.innerText = "Enter a number to play!";
   document.querySelector(".min-input").value = ""
