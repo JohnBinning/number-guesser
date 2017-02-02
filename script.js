@@ -49,6 +49,8 @@ selResetButton.addEventListener('click', function(){
   lastGuess.innerText ="";
   lastGuessWas.innerText ="";
   resultText.innerText = "Enter a number to play!";
+  document.querySelector(".min-input").value = ""
+  document.querySelector(".max-input").value = ""
 })
 
 // turns user input from string to number, tells them if the guess was correct
