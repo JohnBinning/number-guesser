@@ -68,6 +68,7 @@ h1 {
 main {
   margin: 10% auto 0;
   width: 85%;
+  text-align: center;
 }
 
 #user-guess {
@@ -106,7 +107,7 @@ button {
 }
 
 .guess-buttons, .clear-buttons {
-  margin-left: 15%;
+  /*margin-left: 15%;*/
   width: 70%;
 }
 
@@ -174,27 +175,51 @@ button {
   color: #FFFFFF;
   }
 
-  .guess-buttons, .clear-buttons {
-    width: 15em;
-  }
+.guess-buttons, .clear-buttons {
+    width: 13.5em;
+}
 
-  .guess-buttons {
-    margin-left: 15%
-  }
+.guess-buttons {
+  /*margin-left: 20%*/
+}
 
-  .clear-buttons {
-    margin-left: 5em;
-  }
+.clear-buttons {
+  margin-left: 5em;
+}
 
-  #result-text {
-    font-size: 1.8em;
-  }
+.user-range-button {
+  margin-left: 0%;
+  width: 33em;
+}
 
-  #user-control-value {
-    font-size: 1.8em;
-  }
+#user-range-input {
+  width: 33em;
+  padding-left: 20%;
+}
 
-  #last-guess-was {
-    font-size: 1.8em;
-  }
+#user-input-display {
+  margin-left: 0%;
+}
+
+#reset-button {
+  margin-left: 0px;
+  width: 33em;
+}
+
+#user-guess {
+  width: 500px;
+  margin-left: 0px;
+}
+
+#result-text {
+  font-size: 1.8em;
+}
+
+#user-control-value {
+  font-size: 1.8em;
+}
+
+#last-guess-was {
+  font-size: 1.8em;
+}
 }
