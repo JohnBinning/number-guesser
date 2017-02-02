@@ -7,8 +7,8 @@ var selSubmitButton = document.querySelector('.user-range-button')
 var resultText = document.querySelector('#result-text');
 var lastGuess = document.querySelector('#last-guess');
 var lastGuessWas = document.querySelector('#last-guess-was');
-var minVal = 1
-var maxVal = 100
+var minVal = 1;
+var maxVal = 100;
 var answer;
 
 function getRandomNumb(minVal, maxVal){
@@ -20,7 +20,7 @@ function getRandomNumb(minVal, maxVal){
 }
 
 window.onload = function() {
-  getRandomNumb(minVal, maxVal)
+  getRandomNumb(minVal, maxVal);
 }
 
 selGuessButton.addEventListener('click', function() {
@@ -48,7 +48,7 @@ selResetButton.addEventListener('click', function(){
   userInputGuess.value = "";
   lastGuess.innerText ="";
   lastGuessWas.innerText ="";
-  resultText.innerText = "Enter a number to play!"
+  resultText.innerText = "Enter a number to play!";
 })
 
 // turns user input from string to number, tells them if the guess was correct
