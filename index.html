@@ -15,17 +15,24 @@
     <main id="main-section">
       <input id="user-guess" placeholder="Enter your guess" type="number">
       <section class="top-section">
-        <button class="guess-buttons">Guess</button>
-        <button class="clear-buttons">Clear</button>
+        <button class="guess-buttons" disabled>Guess</button>
+        <button class="clear-buttons" disabled>Clear</button>
       </section>
       <section id="user-input-display">
         <p id="last-guess-was">Your last guess was</p>
-        <p id="last-guess"></p>
-        <!--target this with js to at the number text  -->
+        <p id="last-guess">?</p>
         <p id="result-text">Enter a number to play!</p>
+        <button id="reset-button" disabled>Reset</button>
+      </section>
+      <section id="user-range-input">
+        <p id="user-control-value">Want take control? Enter your own values!</p>
+        <label for="min-input">Min</label>
+        <input type="Number" class="min-input" placeholder="Min - 0">
+        <label for="max-input">Max</label>
+        <input type="Number" class="max-input" placeholder="Max - 100">
+        <button class="user-range-button">Submit</button>
       </section>
       <section class="bottom-section">
-        <button id="reset-button">Reset</button>
       </section>
     </main>
   </body>

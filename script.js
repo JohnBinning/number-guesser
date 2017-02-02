@@ -1,51 +1,83 @@
-// var initialNumb = getRandomNumb(min, max);
-var initialNumb = Math.floor(Math.random() * 100 +1);
-console.log(initialNumb);
+
 var userInputGuess = document.querySelector('#user-guess');
 var selGuessButton = document.querySelector('.guess-buttons');
 var selClearButton = document.querySelector('.clear-buttons');
 var selResetButton = document.querySelector('#reset-button');
-var inputText = document.querySelector('#result-text');
-var initialNumbValue = initialNumb.value;
+var selSubmitButton = document.querySelector('.user-range-button')
+var resultText = document.querySelector('#result-text');
 var lastGuess = document.querySelector('#last-guess');
-var min = 0;
-var max = 100;
+var lastGuessWas = document.querySelector('#last-guess-was');
+var minVal = 1
+var maxVal = 100
+var answer;
 
+function getRandomNumb(minVal, maxVal){
+  maxVal = parseInt(maxVal, 10)
+  minVal = parseInt(minVal, 10)
+  answer = Math.floor(Math.random() * (maxVal - minVal)) + minVal;
+  console.log(answer, "answer");
+  return answer;
+}
 
-// function getRandomNumb (min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// };
+window.onload = function() {
+  getRandomNumb(minVal, maxVal)
+}
 
 selGuessButton.addEventListener('click', function() {
   var findOut = userInputGuess.value;
-  // return(findOut);
   getAnswer();
+})
+
+selSubmitButton.addEventListener('click', function(){
+  minVal = document.querySelector(".min-input").value;
+  maxVal = document.querySelector(".max-input").value;
+  if (maxVal < minVal){
+    alert('Maximum must be higher than minimum');
+  } else {
+    getRandomNumb(minVal, maxVal);
+  }
 })
 
 selClearButton.addEventListener('click', function(){
   userInputGuess.value = "";
 })
 
+// resets the input, the statements about the guess, and the "answer"
 selResetButton.addEventListener('click', function(){
-  initialNumb = getRandomNumb(1, 100);
+  getRandomNumb(minVal, maxVal);
   userInputGuess.value = "";
+  lastGuess.innerText ="";
+  lastGuessWas.innerText ="";
+  resultText.innerText = "Enter a number to play!"
 })
 
+// turns user input from string to number, tells them if the guess was correct
+// lastGuess.innerText = number - this is placing the guess on the screen
 function getAnswer(){
-  var number = parseInt(userInputGuess.value);
+  var number = parseInt(userInputGuess.value, 10);
   console.log(number);
   lastGuess.innerText = number;
-  if (number > initialNumb && number < max) {
-    inputText.innerText = "That is too high!"
-  } else if (number < initialNumb && number > min) {
-    inputText.innerText = "That is too low!"
-  } else if (number === initialNumb) {
-    inputText.innerText = "BOOM!"
-  } else if (number > max || number < min) {
-    inputText.innerText = "Please pick a number within " + min + "and " + max
+  if (number > answer && number < maxVal) {
+    resultText.innerText = "That is too high!";
+  } else if (number < answer && number > minVal) {
+    resultText.innerText = "That is too low!";
+  } else if (number === answer) {
+    resultText.innerText = "BOOM!";
+    minVal = parseInt(minVal, 10) -10
+    maxVal = parseInt(maxVal, 10) +10
+    document.querySelector('.min-input').value = minVal
+    document.querySelector('.max-input').value = maxVal
+    alert('Congrats you win! Range is increased by 10 on both sides');
+    getRandomNumb(minVal, maxVal);
+  } else if (number > maxVal || number < minVal) {
+    resultText.innerText = "Please pick a number within " + minVal + " and " + maxVal;
+  } else
+  resultText.innerText = "Try entering a number";
   }
-}
-// within html start buttons on disabled, then enable them based on an action
-// instead of click, use keyup
+
+// enables all buttons when value is entered into the guess box
+userInputGuess.addEventListener('keyup', function(){
+  selGuessButton.disabled = false;
+  selClearButton.disabled = false;
+  selResetButton.disabled = false;
+})
