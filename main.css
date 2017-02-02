@@ -157,6 +157,15 @@ button:hover:enabled {
   padding: 5px;
   margin-left: 20%;
 }
+
+#user-range-input {
+  width: 33em;
+  position: relative;
+  margin-left: 45%;
+  left: -16.5em;
+  /*bottom: 150px;*/
+}
+
 }
 
 /*Greater than 900px*/
@@ -192,10 +201,6 @@ button {
   width: 33em;
 }
 
-#user-range-input {
-  width: 33em;
-  padding-left: 20%;
-}
 
 #user-input-display {
   margin-left: 0%;
@@ -221,5 +226,13 @@ button {
 
 #last-guess-was {
   font-size: 1.8em;
+}
+
+#user-range-input {
+  width: 33em;
+  position: relative;
+  margin-left: 40%;
+  left: -16.5em;
+  /*bottom: 150px;*/
 }
 }
