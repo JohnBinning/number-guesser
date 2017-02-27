@@ -1,70 +1,242 @@
 body {
   margin: 0px;
 }
-main {
-  margin: auto;
-}
+
 header {
   margin-top: 0px;
   background-color: #404041;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  height: 20%;
   text-align: center;
+  font-size: 32px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   color: #ED458B
 }
+
 h1 {
   margin-top: 0px;
 }
+
+#last-guess-was {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5%;
+  font-size: 1.4em;
+  color: #404041
+
+}
+#last-guess {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #ED458B;
+  font-size: 12em;
+}
+
+#result-text {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5%;
+  font-size: 1.4em;
+  color: #404041
+}
+
+#user-range-input {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5%;
+  padding-left: 10%;
+}
+
 .top-section {
-  padding: 20%;
   padding-top: 3%;
-}
-.top-section {
-  padding-left: 40%;
   display: inline-block;
-  margin: auto;
+  width: 100%;
 }
-}
-.bottom-section {
-  padding-left: 50%;
-  display: inline-block;
+
+/*.bottom-section {*/
+  /*display: inline-block;
   margin: 0 auto;
-}
+}*/
 #guesser {
   color: #E6E7E8;
   font-weight: 300;
   /*why is font-weight not working?*/
 }
+
+main {
+  margin: 10% auto 0;
+  width: 85%;
+  text-align: center;
+}
+
 #user-guess {
-  width: 300px;
-  height: 40px;
-  font-size: 20pt;
-  font-family: 'Open Sans', sans-serif;
+  width: 95%;
+  font-size: 1.5em;
   font-weight: 300;
   border: 2px solid #D3D4D5;
-  margin-left: 40%;
+  margin-bottom: 5%;
+  padding: 3%
+  /*width: 10.5em;
+  height: 1.5em;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;*/
+  /*margin-left: 40%;*/
+}
+
+.min-input, .max-input {
+    border: 2px solid #D3D4D5;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 2%;
 }
 
 button {
   background-color: #929497;
   border-radius: 50pt;
-  width: 150px;
-  height: 40px;
+  border-width: 0;
+  margin-bottom: 1em;
+  width: 12em;
+  height: 2em;
   font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
+  text-align: center;
   color: #FFFFFF;
 }
+
+.guess-buttons, .clear-buttons {
+  /*margin-left: 15%;*/
+  width: 70%;
+}
+
+/*#reset-button {*/
+  /*width: 300px;
+  text-align: center;
+}*/
 
 .dis-button {
   background-color: #D0D2D3;
 }
 
-#guess-button:hover {
-  background-color: #EB008B;
+:disabled {
+  background-color: #D0D2D3;
 }
-#clear-button:hover {
+
+button:hover:enabled {
   background-color: #EB008B;
+  cursor: pointer;
 }
-#reset-button:hover {
-  background-color: #EB008B;
+
+#user-control-value {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5%;
+  font-size: 1.4em;
+  color: #404041
+}
+
+#reset-button {
+  margin-left: 15%;
+  width: 70%;
+}
+
+.user-range-button {
+  margin-left: 15%;
+  width: 70%
+}
+
+/*greater than 480px*/
+@media screen and (min-width: 480px) {
+
+#user-guess {
+  width: 60%;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 5px;
+  margin-left: 20%;
+}
+
+#user-range-input {
+  width: 33em;
+  position: relative;
+  margin-left: 45%;
+  left: -16.5em;
+  /*bottom: 150px;*/
+}
+
+.min-input, .max-input {
+  width: 30%;
+}
+
+}
+
+/*Greater than 900px*/
+@media screen and (min-width: 900px) {
+
+button {
+  background-color: #929497;
+  border-radius: 50pt;
+  border-width: 0;
+  margin-bottom: 1em;
+  width: 12em;
+  height: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  color: #FFFFFF;
+  }
+
+.guess-buttons, .clear-buttons {
+    width: 13.5em;
+}
+
+.guess-buttons {
+  /*margin-left: 20%*/
+}
+
+.clear-buttons {
+  margin-left: 5em;
+}
+
+.user-range-button {
+  margin-left: 0%;
+  width: 33em;
+}
+
+
+#user-input-display {
+  margin-left: 0%;
+}
+
+#reset-button {
+  margin-left: 0px;
+  width: 33em;
+}
+
+#user-guess {
+  width: 500px;
+  margin-left: 0px;
+}
+
+#result-text {
+  font-size: 1.8em;
+}
+
+#user-control-value {
+  font-size: 1.8em;
+}
+
+#last-guess-was {
+  font-size: 1.8em;
+}
+
+#user-range-input {
+  width: 33em;
+  position: relative;
+  margin-left: 40%;
+  left: -16.5em;
+  /*bottom: 150px;*/
+}
 }

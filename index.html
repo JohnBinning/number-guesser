@@ -3,25 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="script.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Number <span id="guesser">Guesser</span><h1>
     </header>
     <main id="main-section">
-      <input id="user-guess" placeholder="Enter your guess">
+      <input id="user-guess" placeholder="Enter your guess" type="number">
       <section class="top-section">
-        <button class="top-buttons">Guess</button>
-        <button class="top-buttons">Clear</button>
+        <button class="guess-buttons" disabled>Guess</button>
+        <button class="clear-buttons" disabled>Clear</button>
       </section>
       <section id="user-input-display">
+        <p id="last-guess-was">Your last guess was</p>
+        <p id="last-guess">◊</p>
+        <p id="result-text">Enter a number to play!</p>
       </section>
-      <div class="bottom-section">
-        <button id="reset-button">Reset</button>
-      </div>
+      <button id="reset-button" disabled>Reset</button>
+      <section id="user-range-input">
+        <p id="user-control-value">Want to take control? Enter your own values!</p>
+        <input type="Number" class="min-input" placeholder="Min - 1">
+        <input type="Number" class="max-input" placeholder="Max - 100">
+      </section>
+      <section class="bottom-section">
+        <button class="user-range-button">Submit</button>
+      </section>
     </main>
   </body>
+  <script src="script.js" type="text/javascript"></script>
 </html>
